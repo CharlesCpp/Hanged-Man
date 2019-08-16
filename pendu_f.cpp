@@ -23,11 +23,9 @@ char    *create_result(char *str)
 
 int    check_t(char t, char *mot)
 {
-    if ((t <= 'a' && t >= 'z') || (t <= 'A' && t >= 'Z'))
-        return 0;
     for(int i = 0; mot[i]; i++)
     {
-        if (t == mot[i]);
+        if (t == mot[i])
             return 1;
     }
     return 0;
@@ -40,8 +38,6 @@ char    *add_result(char t, char *mot, char *result)
     {
         if(mot[i] == t && result[i] == '_')
             result[i] = t;
-        else if (result[i] != '_')
-            i++;
         i++;
     }
     return result;

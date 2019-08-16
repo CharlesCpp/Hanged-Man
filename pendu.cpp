@@ -7,6 +7,7 @@ int main()
     char *result;
     int tries = 8;
     char t;
+    string l,p;
 
     mot = (char*)malloc(1024 * sizeof(char));
     result = (char*)malloc(1024 * sizeof(char));
@@ -14,9 +15,10 @@ int main()
     cout << "Choisissez votre mot: ";
     cin >> mot;
     result = create_result(mot);
-    while(result != mot && tries > 0)
+    l = string(mot);
+    while(l != p && tries > 0)
     {
-        cout << "===================\n";
+        cout << "================================\n";
         cout << "Vous avez trouver: ";
         for(int j = 0; j <= 0 ; j++)
             cout << "\"" << result << "\"" << endl << endl;
@@ -25,13 +27,20 @@ int main()
         if(check_t(t, mot) == 1)
         {
             result = add_result(t, mot, result);
-            cout << "!!! Bien jouer !!!" << endl;
+            cout << endl << "!!! Bien jouer !!!" << endl << endl;
         }
         else
         {
             tries--;
-            cout << "/!\\ Perdu /!\\" << endl;
+            cout << endl << "/!\\ Perdu /!\\" << endl << endl;
         }
+        p = string(result);
+    }
+    if(l == p)
+    {
+        cout << "================================\n";
+        cout << "Vous avez trouver: ";
+        cout << "\"" << result << "\"" << endl << endl;
     }
     free(mot);
     free(result);

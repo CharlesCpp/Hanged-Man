@@ -32,7 +32,6 @@ int main()
             tries--;
             cout << "Perdu !" << endl;
         }
-        
     }
     free(mot);
     free(result);

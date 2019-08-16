@@ -25,12 +25,12 @@ int main()
         if(check_t(t, mot))
         {
             result = add_result(t, mot, result);
-            cout << "Bien jouer !" << endl;
+            cout << "!!! Bien jouer !!!" << endl;
         }
         else
         {
             tries--;
-            cout << "Perdu !" << endl;
+            cout << "/!\\ Perdu /!\\" << endl;
         }
     }
     free(mot);

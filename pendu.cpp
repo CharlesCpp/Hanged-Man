@@ -27,6 +27,12 @@ int main()
             result = add_result(t, mot, result);
             cout << "Bien jouer !" << endl;
         }
+        else
+        {
+            tries--;
+            cout << "Perdu !" << endl;
+        }
+        
     }
     free(mot);
     free(result);

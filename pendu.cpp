@@ -22,7 +22,7 @@ int main()
             cout << "\"" << result << "\"" << endl << endl;
         cout << "A vous de jouer(il vous reste " << tries << " essais): ";
         cin >> t;
-        if(check_t(t, mot))
+        if(check_t(t, mot) == 1)
         {
             result = add_result(t, mot, result);
             cout << "!!! Bien jouer !!!" << endl;

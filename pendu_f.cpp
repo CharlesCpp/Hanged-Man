@@ -21,19 +21,16 @@ char    *create_result(char *str)
     return result;
 }
 
-bool    check_t(char t, char *mot)
+int    check_t(char t, char *mot)
 {
     if ((t <= 'a' && t >= 'z') || (t <= 'A' && t >= 'Z'))
-        return false;
-    else
+        return 0;
+    for(int i = 0; mot[i]; i++)
     {
-        for(int i = 0; mot[i]; i++)
-        {
-            if (t == mot[i]);
-                return true;
-        }
+        if (t == mot[i]);
+            return 1;
     }
-    return false;
+    return 0;
 }
 
 char    *add_result(char t, char *mot, char *result)

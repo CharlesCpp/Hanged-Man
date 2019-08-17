@@ -24,6 +24,7 @@ int main()
             cout << "\"" << result << "\"" << endl << endl;
         cout << "A vous de jouer(il vous reste " << tries << " essais): ";
         cin >> t;
+        system("CLS");
         if(check_t(t, mot) == 1)
         {
             result = add_result(t, mot, result);
@@ -42,6 +43,8 @@ int main()
         cout << "Vous avez trouver: ";
         cout << "\"" << result << "\"" << endl << endl;
     }
+    system("Pause");
+    cout << "Quitting..." << endl;
     free(mot);
     free(result);
 }

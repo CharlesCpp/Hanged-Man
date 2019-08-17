@@ -1,4 +1,4 @@
 # Compile
-A simple find a world game (idk how to call that in english)
+This is a hanged man codded in C++
 
-To compile just run : g++ pendu.cpp pendu_f.cpp
+To compile just make sure you download all files then run : g++ thehangedman.cpp thehangedman_f.cpp

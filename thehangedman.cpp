@@ -18,8 +18,8 @@ int main()
     char t;
     string l,p;
 
-    mot = (char*)malloc(1024 * sizeof(char));
-    result = (char*)malloc(1024 * sizeof(char));
+    mot = (char*)malloc(lenght(mot) * sizeof(char));
+    result = (char*)malloc(lenght(mot)* sizeof(char));
     cout << "Welcome to a hanged man game codded in C++ by Charles C\n";
     cout << "Choose a word: ";
     cin >> mot;

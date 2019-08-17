@@ -1,5 +1,14 @@
+/*
+
+This is a hanged man codded in C++ by Charles C
+This language still pretty new for me so if you have any tip that can improve the code or even make it lighter. 
+Fact that i have included pretty much nothing else iostream to try make that the most harder way.
+Good game
+
+*/
+
 #include <iostream>
-#include "pendu_f.hpp"
+#include "thehangedman_f.hpp"
 
 int main()
 {
@@ -11,36 +20,41 @@ int main()
 
     mot = (char*)malloc(1024 * sizeof(char));
     result = (char*)malloc(1024 * sizeof(char));
-    cout << "Bienvenue sur un jeux de pendu programmer en C++\n";
-    cout << "Choisissez votre mot: ";
+    cout << "Welcome to a hanged man game codded in C++ by Charles C\n";
+    cout << "Choose a word: ";
     cin >> mot;
     result = create_result(mot);
     l = string(mot);
     while(l != p && tries > 0)
     {
         cout << "================================\n";
-        cout << "Vous avez trouver: ";
+        cout << "You have fould: ";
         for(int j = 0; j <= 0 ; j++)
             cout << "\"" << result << "\"" << endl << endl;
-        cout << "A vous de jouer(il vous reste " << tries << " essais): ";
+        cout << "It's your turn (you have " << tries << " tries left): ";
         cin >> t;
-        system("CLS");
+        cin.ignore();
+        #ifdef __unix__ 
+            system("clear");
+        #else
+            system("CLS");
+        #endif
         if(check_t(t, mot) == 1)
         {
             result = add_result(t, mot, result);
-            cout << endl << "!!! Bien jouer !!!" << endl << endl;
+            cout << endl << "!!! NICE JOB !!!" << endl << endl;
         }
         else
         {
             tries--;
-            cout << endl << "/!\\ Perdu /!\\" << endl << endl;
+            cout << endl << "/!\\ WRONG /!\\" << endl << endl;
         }
         p = string(result);
     }
     if(l == p)
     {
         cout << "================================\n";
-        cout << "Vous avez trouver: ";
+        cout << "You have found: ";
         cout << "\"" << result << "\"" << endl << endl;
     }
     system("Pause");

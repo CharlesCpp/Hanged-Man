@@ -1,5 +1,4 @@
 #include <iostream>
-#include <vector>
 using namespace std;
 
 char    *add_result(char t, char *mot, char *result);

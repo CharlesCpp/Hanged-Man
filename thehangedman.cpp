@@ -33,7 +33,6 @@ int main()
             cout << "\"" << result << "\"" << endl << endl;
         cout << "It's your turn (you have " << tries << " tries left): ";
         cin >> t;
-        cin.ignore();
         #ifdef __unix__ 
             system("clear");
         #else
